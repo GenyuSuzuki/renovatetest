@@ -16,8 +16,5 @@
   "patch": {
     "automerge": true
   },
-  "labels": ["update-dependencies"],
-  "schedule": [
-    "before 1pm every weekday"
-  ]
+  "labels": ["update-dependencies"]
 }

@@ -18,6 +18,6 @@
   },
   "labels": ["update-dependencies"],
   "schedule": [
-    "before 12pm every weekday"
+    "before 1pm every weekday"
   ]
 }

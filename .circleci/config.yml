@@ -1,6 +1,10 @@
-version: 2
+version: 2.1
+
+orbs:
+  codecov: codecov/codecov@1.0.5
+
 jobs:
-  build:
+  test:
     docker:
       - image: debian:stretch
 
@@ -14,3 +18,13 @@ jobs:
       - run:
           name: Print the Current Time
           command: date
+
+workflows:
+  version: 2
+  test-publish:
+    jobs:
+      - test:
+          filters:
+            tags:
+              only: /^v[0-9]+(\.[0-9]+)*/
+
